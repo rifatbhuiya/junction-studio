@@ -1,1 +1,265 @@
 @charset "UTF-8";
+
+/**
+    Author: Rifat Bhiuya
+    Author email: hello.rifatbhuiya@gmail.com
+    Version: 0.0.0.1
+*/
+
+/**
+----------------
+Table Of Content
+----------------
+0. Common CSS Start
+1. Header CSS Start
+2. Hero CSS Start
+*/
+
+:root { 
+    /* Colors */
+    --white_color: #ffffff;
+    --black_color: #000000;
+
+    /* Round */
+    --round_sm: 5px;
+    --round_md: 10px;
+    --round_lg: 25px;
+    --round_full: 50%;
+
+    /* Duration */
+    --transition: all ease-in-out .5s;
+
+    /* Font Family */
+    --sans_serif: "Plus Jakarta Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+li,
+span,
+address,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+a,
+button {
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+body {
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: var(--sans_serif);
+}
+/* Common CSS End */
+
+.main-header {
+    padding: 44px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.main-header.fixed-header {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main-header .nav-items.d-flex {
+    gap: 40px;
+}
+
+.main-header .nav-items a {
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--white_color);
+}
+/* Header CSS End */
+
+.hero {
+    background-color: var(--black_color); /* The background should be temporary */
+    position: relative;
+    overflow-x: hidden;
+}
+
+.hero .hero-slider .slide-item {
+    height: 1024px;
+    width: 100%;
+    background: url(../images/hero-bg.png);
+}
+
+.hero .slick-dots {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    text-align: center;
+}
+
+.hero .slick-dots li button {
+    border-radius: var(--round_full);
+    -webkit-border-radius: var(--round_full);
+    -moz-border-radius: var(--round_full);
+    -ms-border-radius: var(--round_full);
+    -o-border-radius: var(--round_full);
+    height: 8px;
+    width: 8px;
+    color: transparent;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.30);
+}
+
+.hero .slick-dots li.slick-active button {
+    height: 12px;
+    width: 12px;
+    background-color: var(--white_color);
+}
+
+.hero .slider-control {
+    position: absolute;
+    bottom: 8%;
+    right: 0%;
+    width: 600px;
+}
+
+.hero .slider-control p {
+    font-size: 25px;
+    color: var(--white_color);
+}
+
+.hero .slider-control p img {
+    height: 12px;
+    width: 10px;
+}
+
+.hero .slider-nav .slick-track {
+    display: flex;
+    gap: 20px;
+    width: 100% !important;
+}
+
+.hero .slider-nav .slick-slide {
+    width: 200px !important;
+}
+
+.hero .slider-nav-item img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero .slider-nav .slick-prev {
+    display: none !important;
+}
+
+.hero .slider-nav .slick-next.slick-arrow {
+    position: absolute;
+    top: -24%;
+    right: 16%;
+    background-color: transparent;
+    border: none;
+    color: var(--white_color);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+    font-family: var(--sans_serif);
+}
+
+.hero .bar {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.hero .bar button {
+    border: none;
+    background-color: transparent;
+}
+
+.hero .video-icon {
+    position: absolute;
+    bottom: 30%;
+    right: 12%;
+}
+
+.hero .video-icon button {
+    background-color: transparent;
+    border: none;
+}
+
+.hero .slide-item .slide-content {
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    color: var(--white_color);
+}
+
+.hero .slide-item .slide-content small {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.hero .slide-item .slide-content p .year {
+    font-size: 30px;
+}
+
+.hero .slide-item .slide-content h2 {
+    font-size: 72px;
+    line-height: 75px;
+    font-weight: 400;
+}
+/* Hero CSS End */
