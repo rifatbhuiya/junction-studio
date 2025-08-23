@@ -11,4 +11,4 @@
             $('.main-header').removeClass('fixed-header');
         }
     });
-}())
+}());
