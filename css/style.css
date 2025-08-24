@@ -140,9 +140,8 @@ body {
 }
 
 .hero .hero-slider .slide-item {
-    height: 1024px;
+    height: 100vh;
     width: 100%;
-    background: url(../images/hero-bg.png);
 }
 
 .hero .slick-dots {
@@ -200,10 +199,12 @@ body {
 }
 
 .hero .slider-nav .slick-slide {
+    height: 120px !important;
     width: 200px !important;
 }
 
 .hero .slider-nav-item img {
+    height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
@@ -244,13 +245,17 @@ body {
 
 .hero .video-icon {
     position: absolute;
-    bottom: 30%;
+    bottom: 35%;
     right: 12%;
 }
 
 .hero .video-icon button {
     background-color: transparent;
     border: none;
+}
+
+.hero .video-icon button img {
+    width: 80%;
 }
 
 .hero .slide-item .slide-content {
